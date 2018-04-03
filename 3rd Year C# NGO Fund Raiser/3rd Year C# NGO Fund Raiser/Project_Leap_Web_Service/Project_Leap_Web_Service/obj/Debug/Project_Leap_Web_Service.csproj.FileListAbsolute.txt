@@ -1,0 +1,6 @@
+C:\Users\SAMSUNG\Desktop\Not_Campus\Trunk\Project_Leap_Web_Service\Project_Leap_Web_Service\bin\Project_Leap_Web_Service.dll.config
+C:\Users\SAMSUNG\Desktop\Not_Campus\Trunk\Project_Leap_Web_Service\Project_Leap_Web_Service\bin\Project_Leap_Web_Service.dll
+C:\Users\SAMSUNG\Desktop\Not_Campus\Trunk\Project_Leap_Web_Service\Project_Leap_Web_Service\bin\Project_Leap_Web_Service.pdb
+C:\Users\SAMSUNG\Desktop\Not_Campus\Trunk\Project_Leap_Web_Service\Project_Leap_Web_Service\obj\Debug\Project_Leap_Web_Service.csprojResolveAssemblyReference.cache
+C:\Users\SAMSUNG\Desktop\Not_Campus\Trunk\Project_Leap_Web_Service\Project_Leap_Web_Service\obj\Debug\Project_Leap_Web_Service.dll
+C:\Users\SAMSUNG\Desktop\Not_Campus\Trunk\Project_Leap_Web_Service\Project_Leap_Web_Service\obj\Debug\Project_Leap_Web_Service.pdb

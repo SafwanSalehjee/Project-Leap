@@ -1,0 +1,162 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Project_Leap_Master.master.cs" Inherits="Project_Leap_V3.Project_Leap_Master" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+    <!-- Basic Page Needs
+	    ================================================== -->
+    <meta charset="utf-8" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <!-- Mobile Specific Metas
+	    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+    <!-- CSS
+	    ================================================== -->
+    <link rel="stylesheet" href="stylesheets/base.css" />
+    <link rel="stylesheet" href="stylesheets/skeleton.css" />
+    <link rel="stylesheet" href="stylesheets/layout.css" />
+    <link rel="stylesheet" href="stylesheets/flexslider.css" />
+    <link rel="stylesheet" href="stylesheets/prettyPhoto.css" />
+
+    <!-- CSS
+	    ================================================== -->
+    <link rel="stylesheet" href="stylesheets/base.css" />
+    <link rel="stylesheet" href="stylesheets/skeleton.css" />
+    <link rel="stylesheet" href="stylesheets/layout.css" />
+    <link rel="stylesheet" href="stylesheets/flexslider.css" />
+    <link rel="stylesheet" href="stylesheets/prettyPhoto.css" />
+
+    <!--Loading
+       ================================================== -->
+    <link rel="stylesheet" href="css/main.css"/>
+	<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    <!-- CSS
+      ================================================== -->
+
+    <link rel="stylesheet" type="text/css" href="css/default.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/loaders.css" />
+    <!-- JS
+      ================================================== -->
+    <script type="text/javascript" src="js2/jquery.js"></script>
+    <script src="js/jquery.flexslider-min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/ScrollScript.js"></script>
+
+    <!-- JS
+	    ================================================== -->
+
+    <script type="text/javascript" src="js2/jquery.wheelmenu.js"></script>
+
+    <!-- Favicons
+	    ================================================== -->
+    <link rel="shortcut icon" href="images/i.ico" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png" />
+
+    <title>
+        <asp:ContentPlaceHolder ID="head" runat="server">
+        </asp:ContentPlaceHolder>
+    </title>
+</head>
+
+<body>
+    <form id="form1" runat="server">
+        <header id="header" class="site-header" role="banner">
+            <!-- change made here -->
+            <div id="header-inner" class="container sixteen columns over">
+                <!-- end-->
+                <div class="container fifteen columns">
+                    <hgroup class="one-third column alpha">
+                        <h1 id="site-title" class="site-title">
+                            <a href="HomePage.aspx" id="logo" runat="server">
+                                <img src="images/logo.png" alt="Icebrrrg logo" height="63" width="157" /></a>
+                        </h1>
+                    </hgroup>
+                    <nav id="main-nav" class="two thirds column omega menu">
+                        <ul id="main-nav-menu" class="nav-menu">
+                            <li runat="server" id="menu_home" class="current">
+                                <a href="HomePage.aspx">Home</a>
+                            </li>
+                            <li runat="server" id="menu_dashboard">
+                                <a href="DashboardPage.aspx">Dashboard</a>
+                            </li>
+                            <li runat="server" id="menu_user_list">
+                                <a href="UserListPage.aspx">Users</a>
+                            </li>
+                            <li runat="server" id="menu_statistics">
+                                <a id="scrollerD" href="#">Statistics</a>
+                            </li>
+                            <li runat="server" id="menu_faq">
+                                <a href="HelpPage.aspx">FAQ</a>
+                            </li>
+                            <li runat="server" id="menu_login">
+                                <a href="LoginPage.aspx">Login</a>
+                            </li>
+                            <li runat="server" id="menu_register">
+                                <a id="reg_link" runat="server" href="#">Register</a>
+                                <ul class="sub-menu">
+                                    <li><a href="RegisterPage.aspx?regType=NPO">NPO</a></li>
+                                    <li><a href="RegisterPage.aspx?regType=Bus">Business</a></li>
+                                    <li><a href="RegisterPage.aspx?regType=Ind">Individual</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    </nav>
+                    <!-- change made here -->
+                </div>
+                <!-- end-->
+                <!-- change made here -->
+                <div class="container one columns" style="margin-top: -65px;">
+                    <table runat="server" id="userPic">
+                        <tr>
+                            <td>
+                                <a>
+                                    <div class="main2">
+                                        <a href="#wheel" class="wheel-button sw">
+                                            <asp:Image ID="imgPP" Style="width: 50px; height: 50px; border-radius: 25px; border: solid #ddd; border-width: 1px 1px 1px 1px; margin-left: -15px; margin-top: -15px;" runat="server" ImageUrl="images/avatar1.png" />
+                                        </a>
+                                        <ul id="wheel" data-angle="SW" class="wheel">
+                                            <li class="item">
+                                                <asp:LinkButton ID="btnLogOut" runat="server" OnClick="btnLogOut_Click"><i class="icon-signout"></i></asp:LinkButton></li>
+                                            <li class="item"><a href="Update.aspx"><i class="icon-cog"></i></a></li>
+                                            <li class="item"><a id="viewProfile" runat="server"><i class="icon-user"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <script type="text/javascript">
+                                        $(".wheel-button").wheelmenu({
+                                            trigger: "hover",
+                                            animation: "fly",
+                                            angle: "NW"
+                                        });
+                                    </script>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4 id="userNameP" runat="server" style="text-align: center;">Guest</h4>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- end-->
+            </div>
+
+        </header>
+
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

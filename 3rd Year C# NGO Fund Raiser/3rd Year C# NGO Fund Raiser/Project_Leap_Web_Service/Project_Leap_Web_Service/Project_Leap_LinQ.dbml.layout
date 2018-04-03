@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.25, 31.75" name="Project_Leap_LinQ">
+  <DataContextMoniker Name="/Project_Leap_LinQDataContext" />
+  <nestedChildShapes>
+    <classShape Id="d0123018-a824-49fd-b4d3-3f26e7fed369" absoluteBounds="3.75, 1.125, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/Project_Leap_LinQDataContext/Badge" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9fbe6eef-506b-4984-9dad-d41daceb6061" absoluteBounds="3.765, 1.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="56f8c25a-08f2-4ad9-8464-4b81315592c0" absoluteBounds="3.5, 7.875, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/Project_Leap_LinQDataContext/BusinessPoint" />
+      <nestedChildShapes>
+        <elementListCompartment Id="66c4364d-1307-4f42-9888-848b8d19b26e" absoluteBounds="3.515, 8.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0cd7a04c-82f8-49cd-92f6-3aa378a02f7c" absoluteBounds="6.25, 16.5, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/Project_Leap_LinQDataContext/Donation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="18bba43c-468c-4216-9c3d-a8d2e1e81254" absoluteBounds="6.265, 16.96, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="54da2bf1-aad1-46fd-84a8-91eee9804be6" absoluteBounds="3.5, 21, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/Project_Leap_LinQDataContext/DonationRequest" />
+      <nestedChildShapes>
+        <elementListCompartment Id="67d86c5a-a804-4ef4-b8af-82c170356198" absoluteBounds="3.515, 21.46, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4fc6574f-2139-4a3e-9bdd-53a09d4902d0" absoluteBounds="9, 15.625, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/Project_Leap_LinQDataContext/EquipmentDonation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9e7736c8-c43d-435a-ba78-f0c75a457d62" absoluteBounds="9.015, 16.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="249f2764-0385-4792-a33b-06f9ef10ed56" absoluteBounds="3.5, 29.125, 2, 2.3478011067708309">
+      <DataClassMoniker Name="/Project_Leap_LinQDataContext/Event" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c46d677d-a61b-45c7-bc85-55f98d965ac3" absoluteBounds="3.515, 29.585, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="87b9891c-5cbe-4791-b537-8b8aa242f294" absoluteBounds="6.25, 29.5, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/Project_Leap_LinQDataContext/EventRSVP" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e27074c0-b6c4-4fd1-9941-f14f0aa72ccf" absoluteBounds="6.265, 29.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b14a3acc-3078-426d-8416-479c0c17f79d" absoluteBounds="3.5, 23.75, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/Project_Leap_LinQDataContext/FundraisingCampaign" />
+      <nestedChildShapes>
+        <elementListCompartment Id="175d7154-5f19-4cd9-b97f-f077c53ad646" absoluteBounds="3.515, 24.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a51370d6-3e57-4836-a582-c89d254c146c" absoluteBounds="3.75, 4.25, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/Project_Leap_LinQDataContext/Individual" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cdb17d78-41d5-46a8-b21a-c1fd96c099e4" absoluteBounds="3.765, 4.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="05347887-75b4-4cf6-b410-fa99270533e4" absoluteBounds="3.5, 15.125, 2, 1.3862939453124987">
+      <DataClassMoniker Name="/Project_Leap_LinQDataContext/Manager" />
+      <nestedChildShapes>
+        <elementListCompartment Id="250b1570-f70f-4095-8618-b900a1431c77" absoluteBounds="3.515, 15.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0afb19f2-05c2-4d1d-a3e5-38e3dfc17b18" absoluteBounds="9, 17.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/Project_Leap_LinQDataContext/MoneyDonation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9e05ebf8-5998-4be3-92d8-906cd61b7503" absoluteBounds="9.015, 18.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d55ff4f7-0c34-4b9c-8c3c-52e2cd1907ff" absoluteBounds="3.5, 11.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/Project_Leap_LinQDataContext/NewsFeed" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c0f4bead-a10c-461f-9b6f-999cc7957df9" absoluteBounds="3.515, 12.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cb4291ad-517d-4880-8258-74381062fccd" absoluteBounds="6.5, 13.125, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/Project_Leap_LinQDataContext/NPORating" />
+      <nestedChildShapes>
+        <elementListCompartment Id="66914305-bcf8-45bf-808b-1645f8b78ba4" absoluteBounds="6.515, 13.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4afe9cae-ebde-4bcf-92ff-6538f5412eed" absoluteBounds="0.75, 11.875, 2, 3.8862125651041666">
+      <DataClassMoniker Name="/Project_Leap_LinQDataContext/Organisation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="eca5590b-0ed5-401a-a035-dbe4aec1a337" absoluteBounds="0.765, 12.335, 1.9700000000000002, 3.3262125651041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="aad13b64-80ca-4b5d-b67f-66c08144e4a1" absoluteBounds="1, 3, 2, 3.6939111328124992">
+      <DataClassMoniker Name="/Project_Leap_LinQDataContext/SystemUser" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ef5db588-2182-4cc6-be03-03af97aa05fe" absoluteBounds="1.0150000000000001, 3.46, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6b531c77-42e1-4eca-83cd-eefa025fba0f" absoluteBounds="6.75, 0.75, 2, 1.3862939453125003">
+      <DataClassMoniker Name="/Project_Leap_LinQDataContext/TransactionPercentage" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c86d863c-4243-4243-a05c-01bb4d5a6c53" absoluteBounds="6.765, 1.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7ef60435-fa78-4bf2-88c5-34912ca1527b" absoluteBounds="6.5, 9.875, 2, 1.9631982421874987">
+      <DataClassMoniker Name="/Project_Leap_LinQDataContext/VolunteerEvent" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2c229a42-d3d0-423b-9357-f22be73fd3e6" absoluteBounds="6.515, 10.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 21.9815991210938); (5.79166666666667 : 21.9815991210938 : JumpStart); (5.95833333333333 : 21.9815991210938 : JumpEnd); (7.25 : 21.9815991210938); (7.25 : 18.4631982421875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/Project_Leap_LinQDataContext/DonationRequest/DonationRequest_Donation" />
+      <nodes>
+        <classShapeMoniker Id="54da2bf1-aad1-46fd-84a8-91eee9804be6" />
+        <classShapeMoniker Id="0cd7a04c-82f8-49cd-92f6-3aa378a02f7c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 16.7556469726563); (9 : 16.7556469726563)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/Project_Leap_LinQDataContext/Donation/Donation_EquipmentDonation" />
+      <nodes>
+        <classShapeMoniker Id="0cd7a04c-82f8-49cd-92f6-3aa378a02f7c" />
+        <classShapeMoniker Id="4fc6574f-2139-4a3e-9bdd-53a09d4902d0" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 30.2892976888021); (6.25 : 30.2892976888021)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/Project_Leap_LinQDataContext/Event/Event_EventRSVP" />
+      <nodes>
+        <classShapeMoniker Id="249f2764-0385-4792-a33b-06f9ef10ed56" />
+        <classShapeMoniker Id="87b9891c-5cbe-4791-b537-8b8aa242f294" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 18.1065991210938); (9 : 18.1065991210938)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/Project_Leap_LinQDataContext/Donation/Donation_MoneyDonation" />
+      <nodes>
+        <classShapeMoniker Id="0cd7a04c-82f8-49cd-92f6-3aa378a02f7c" />
+        <classShapeMoniker Id="0afb19f2-05c2-4d1d-a3e5-38e3dfc17b18" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 11.875); (1.75 : 8.47199625651042); (2.82291666666667 : 8.47199625651042 : JumpStart); (2.98958333333333 : 8.47199625651042 : JumpEnd); (3.5 : 8.47199625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/Project_Leap_LinQDataContext/Organisation/Organisation_BusinessPoint" />
+      <nodes>
+        <classShapeMoniker Id="4afe9cae-ebde-4bcf-92ff-6538f5412eed" />
+        <classShapeMoniker Id="56f8c25a-08f2-4ad9-8464-4b81315592c0" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 15.7612125651042); (1.75 : 17.51849609375); (5.79166666666667 : 17.51849609375 : JumpStart); (5.95833333333333 : 17.51849609375 : JumpEnd); (6.25 : 17.51849609375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/Project_Leap_LinQDataContext/Organisation/Organisation_Donation" />
+      <nodes>
+        <classShapeMoniker Id="4afe9cae-ebde-4bcf-92ff-6538f5412eed" />
+        <classShapeMoniker Id="0cd7a04c-82f8-49cd-92f6-3aa378a02f7c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.2812525 : 15.7612125651042); (2.2812525 : 21.9815991210938); (3.5 : 21.9815991210938)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/Project_Leap_LinQDataContext/Organisation/Organisation_DonationRequest" />
+      <nodes>
+        <classShapeMoniker Id="4afe9cae-ebde-4bcf-92ff-6538f5412eed" />
+        <classShapeMoniker Id="54da2bf1-aad1-46fd-84a8-91eee9804be6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.2187475 : 15.7612125651042); (1.2187475 : 30.2989005533854); (3.5 : 30.2989005533854)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/Project_Leap_LinQDataContext/Organisation/Organisation_Event" />
+      <nodes>
+        <classShapeMoniker Id="4afe9cae-ebde-4bcf-92ff-6538f5412eed" />
+        <classShapeMoniker Id="249f2764-0385-4792-a33b-06f9ef10ed56" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.54687875 : 15.7612125651042); (2.54687875 : 24.7315991210938); (3.5 : 24.7315991210938)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/Project_Leap_LinQDataContext/Organisation/Organisation_FundraisingCampaign" />
+      <nodes>
+        <classShapeMoniker Id="4afe9cae-ebde-4bcf-92ff-6538f5412eed" />
+        <classShapeMoniker Id="b14a3acc-3078-426d-8416-479c0c17f79d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 15.4431062825521); (2.82291666666667 : 15.4431062825521 : JumpStart); (2.98958333333333 : 15.4431062825521 : JumpEnd); (3.5 : 15.4431062825521)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/Project_Leap_LinQDataContext/Organisation/Organisation_Manager" />
+      <nodes>
+        <classShapeMoniker Id="4afe9cae-ebde-4bcf-92ff-6538f5412eed" />
+        <classShapeMoniker Id="05347887-75b4-4cf6-b410-fa99270533e4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 12.6642976888021); (2.82291666666667 : 12.6642976888021 : JumpStart); (2.98958333333333 : 12.6642976888021 : JumpEnd); (3.5 : 12.6642976888021)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/Project_Leap_LinQDataContext/Organisation/Organisation_NewsFeed" />
+      <nodes>
+        <classShapeMoniker Id="4afe9cae-ebde-4bcf-92ff-6538f5412eed" />
+        <classShapeMoniker Id="d55ff4f7-0c34-4b9c-8c3c-52e2cd1907ff" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 14.1098453776042); (2.82291666666667 : 14.1098453776042 : JumpStart); (2.98958333333333 : 14.1098453776042 : JumpEnd); (5.79166666666667 : 14.1098453776042 : JumpStart); (5.95833333333333 : 14.1098453776042 : JumpEnd); (6.5 : 14.1098453776042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/Project_Leap_LinQDataContext/Organisation/Organisation_NPORating" />
+      <nodes>
+        <classShapeMoniker Id="4afe9cae-ebde-4bcf-92ff-6538f5412eed" />
+        <classShapeMoniker Id="cb4291ad-517d-4880-8258-74381062fccd" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.90625 : 6.6939111328125); (2.90625 : 17.0148925195313); (5.79166666666667 : 17.0148925195313 : JumpStart); (5.95833333333333 : 17.0148925195313 : JumpEnd); (6.25 : 17.0148925195313)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/Project_Leap_LinQDataContext/SystemUser/SystemUser_Donation" />
+      <nodes>
+        <classShapeMoniker Id="aad13b64-80ca-4b5d-b67f-66c08144e4a1" />
+        <classShapeMoniker Id="0cd7a04c-82f8-49cd-92f6-3aa378a02f7c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3 : 6.66467936358173); (3.46673176923077 : 7.1314111328125); (5.57291666666667 : 7.1314111328125 : JumpStart); (5.73958333333333 : 7.1314111328125 : JumpEnd); (5.875 : 7.1314111328125); (5.875 : 29.125); (6.25 : 29.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/Project_Leap_LinQDataContext/SystemUser/SystemUser_EventRSVP" />
+      <nodes>
+        <classShapeMoniker Id="aad13b64-80ca-4b5d-b67f-66c08144e4a1" />
+        <classShapeMoniker Id="87b9891c-5cbe-4791-b537-8b8aa242f294" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3 : 4.84699625651042); (3.75 : 4.84699625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/Project_Leap_LinQDataContext/SystemUser/SystemUser_Individual" />
+      <nodes>
+        <classShapeMoniker Id="aad13b64-80ca-4b5d-b67f-66c08144e4a1" />
+        <classShapeMoniker Id="a51370d6-3e57-4836-a582-c89d254c146c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.8749975 : 6.6939111328125); (2.8749975 : 16.1675032552083); (3.5 : 16.1675032552083)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/Project_Leap_LinQDataContext/SystemUser/SystemUser_Manager" />
+      <nodes>
+        <classShapeMoniker Id="aad13b64-80ca-4b5d-b67f-66c08144e4a1" />
+        <classShapeMoniker Id="05347887-75b4-4cf6-b410-fa99270533e4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3 : 6.66006397896634); (3.15884715384615 : 6.8189111328125); (5.57291666666667 : 6.8189111328125 : JumpStart); (5.73958333333333 : 6.8189111328125 : JumpEnd); (6.125 : 6.8189111328125); (6.125 : 12.75); (6.5 : 13.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/Project_Leap_LinQDataContext/SystemUser/SystemUser_NPORating" />
+      <nodes>
+        <classShapeMoniker Id="aad13b64-80ca-4b5d-b67f-66c08144e4a1" />
+        <classShapeMoniker Id="cb4291ad-517d-4880-8258-74381062fccd" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.2812525 : 11.875); (2.2812525 : 10.8565991210937); (2.82291666666667 : 10.8565991210937 : JumpStart); (2.98958333333333 : 10.8565991210937 : JumpEnd); (5.79166666666667 : 10.8565991210937 : JumpStart); (5.95833333333333 : 10.8565991210937 : JumpEnd); (6.04166666666667 : 10.8565991210937 : JumpStart); (6.20833333333333 : 10.8565991210937 : JumpEnd); (6.5 : 10.8565991210937)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/Project_Leap_LinQDataContext/Organisation/Organisation_VolunteerEvent" />
+      <nodes>
+        <classShapeMoniker Id="4afe9cae-ebde-4bcf-92ff-6538f5412eed" />
+        <classShapeMoniker Id="7ef60435-fa78-4bf2-88c5-34912ca1527b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.65625 : 5.44399251302083); (5.65625 : 10.3345470605468); (5.79166666666667 : 10.3345470605468 : JumpStart); (5.95833333333333 : 10.3345470605468 : JumpEnd); (6.04166666666667 : 10.3345470605468 : JumpStart); (6.20833333333333 : 10.3345470605468 : JumpEnd); (6.5 : 10.3345470605468)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/Project_Leap_LinQDataContext/Individual/Individual_VolunteerEvent" />
+      <nodes>
+        <classShapeMoniker Id="a51370d6-3e57-4836-a582-c89d254c146c" />
+        <classShapeMoniker Id="7ef60435-fa78-4bf2-88c5-34912ca1527b" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="d51eeede-bdd5-49df-aad3-dd40af94bfc3" absoluteBounds="6.25, 4, 2, 1.3862939453125">
+      <DataClassMoniker Name="/Project_Leap_LinQDataContext/UserBadge" />
+      <nestedChildShapes>
+        <elementListCompartment Id="364b07b2-4a9f-4eaf-8525-c2b38a98d144" absoluteBounds="6.265, 4.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.75 : 2.45119466145833); (6.46875 : 2.45119466145833); (6.46875 : 4)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/Project_Leap_LinQDataContext/Badge/Badge_UserBadge" />
+      <nodes>
+        <classShapeMoniker Id="d0123018-a824-49fd-b4d3-3f26e7fed369" />
+        <classShapeMoniker Id="d51eeede-bdd5-49df-aad3-dd40af94bfc3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.75 : 4.81814697265625); (6.25 : 4.81814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/Project_Leap_LinQDataContext/Individual/Individual_UserBadge" />
+      <nodes>
+        <classShapeMoniker Id="a51370d6-3e57-4836-a582-c89d254c146c" />
+        <classShapeMoniker Id="d51eeede-bdd5-49df-aad3-dd40af94bfc3" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

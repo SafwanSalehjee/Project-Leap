@@ -1,0 +1,1712 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:53319/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:53319/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:53319/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Project_Leap_Web_Service" />
+      <xsd:import schemaLocation="http://localhost:53319/Service1.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_CaptureVolTimeMobile_InputMessage">
+    <wsdl:part name="parameters" element="tns:CaptureVolTimeMobile" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CaptureVolTimeMobile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CaptureVolTimeMobileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_checkBadge_InputMessage">
+    <wsdl:part name="parameters" element="tns:checkBadge" />
+  </wsdl:message>
+  <wsdl:message name="IService1_checkBadge_OutputMessage">
+    <wsdl:part name="parameters" element="tns:checkBadgeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getNumOfBadgesEarned_InputMessage">
+    <wsdl:part name="parameters" element="tns:getNumOfBadgesEarned" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getNumOfBadgesEarned_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getNumOfBadgesEarnedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getAllDailyDonations_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAllDailyDonations" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getAllDailyDonations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAllDailyDonationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getAllDailyDonationsUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAllDailyDonationsUser" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getAllDailyDonationsUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAllDailyDonationsUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getVolunteersByProvince_InputMessage">
+    <wsdl:part name="parameters" element="tns:getVolunteersByProvince" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getVolunteersByProvince_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getVolunteersByProvinceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getSystemFund_InputMessage">
+    <wsdl:part name="parameters" element="tns:getSystemFund" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getSystemFund_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getSystemFundResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getTopBusDon_InputMessage">
+    <wsdl:part name="parameters" element="tns:getTopBusDon" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getTopBusDon_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getTopBusDonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getFCReports_InputMessage">
+    <wsdl:part name="parameters" element="tns:getFCReports" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getFCReports_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getFCReportsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getVolsShowingUp_InputMessage">
+    <wsdl:part name="parameters" element="tns:getVolsShowingUp" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getVolsShowingUp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getVolsShowingUpResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getFCSuccessRate_InputMessage">
+    <wsdl:part name="parameters" element="tns:getFCSuccessRate" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getFCSuccessRate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getFCSuccessRateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getNPOActivity_InputMessage">
+    <wsdl:part name="parameters" element="tns:getNPOActivity" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getNPOActivity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getNPOActivityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_MostActiveUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:MostActiveUser" />
+  </wsdl:message>
+  <wsdl:message name="IService1_MostActiveUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MostActiveUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_targetedDonations_InputMessage">
+    <wsdl:part name="parameters" element="tns:targetedDonations" />
+  </wsdl:message>
+  <wsdl:message name="IService1_targetedDonations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:targetedDonationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_TypeMostSupportInArea_InputMessage">
+    <wsdl:part name="parameters" element="tns:TypeMostSupportInArea" />
+  </wsdl:message>
+  <wsdl:message name="IService1_TypeMostSupportInArea_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TypeMostSupportInAreaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_MostSupportByType_InputMessage">
+    <wsdl:part name="parameters" element="tns:MostSupportByType" />
+  </wsdl:message>
+  <wsdl:message name="IService1_MostSupportByType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MostSupportByTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_MostSupportInType_InputMessage">
+    <wsdl:part name="parameters" element="tns:MostSupportInType" />
+  </wsdl:message>
+  <wsdl:message name="IService1_MostSupportInType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MostSupportInTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_NumOfOrgByIndustry_InputMessage">
+    <wsdl:part name="parameters" element="tns:NumOfOrgByIndustry" />
+  </wsdl:message>
+  <wsdl:message name="IService1_NumOfOrgByIndustry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NumOfOrgByIndustryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getDailyUserRegistration_InputMessage">
+    <wsdl:part name="parameters" element="tns:getDailyUserRegistration" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getDailyUserRegistration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getDailyUserRegistrationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getDailyOrganisationRegistration_InputMessage">
+    <wsdl:part name="parameters" element="tns:getDailyOrganisationRegistration" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getDailyOrganisationRegistration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getDailyOrganisationRegistrationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getUserBadgesCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:getUserBadgesCount" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getUserBadgesCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getUserBadgesCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getNPORatingReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:getNPORatingReport" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getNPORatingReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getNPORatingReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getDonationsForComparison_InputMessage">
+    <wsdl:part name="parameters" element="tns:getDonationsForComparison" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getDonationsForComparison_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getDonationsForComparisonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_chechForNewDonations_InputMessage">
+    <wsdl:part name="parameters" element="tns:chechForNewDonations" />
+  </wsdl:message>
+  <wsdl:message name="IService1_chechForNewDonations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:chechForNewDonationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_checkLiveNewDonations_InputMessage">
+    <wsdl:part name="parameters" element="tns:checkLiveNewDonations" />
+  </wsdl:message>
+  <wsdl:message name="IService1_checkLiveNewDonations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:checkLiveNewDonationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_registerIndividual_InputMessage">
+    <wsdl:part name="parameters" element="tns:registerIndividual" />
+  </wsdl:message>
+  <wsdl:message name="IService1_registerIndividual_OutputMessage">
+    <wsdl:part name="parameters" element="tns:registerIndividualResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_NumberOfTimes_InputMessage">
+    <wsdl:part name="parameters" element="tns:NumberOfTimes" />
+  </wsdl:message>
+  <wsdl:message name="IService1_NumberOfTimes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NumberOfTimesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addOrganisation_InputMessage">
+    <wsdl:part name="parameters" element="tns:addOrganisation" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addOrganisation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addOrganisationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CheckDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckDetails" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CheckDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:getUsers" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getOrganisations_InputMessage">
+    <wsdl:part name="parameters" element="tns:getOrganisations" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getOrganisations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getOrganisationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:getUser" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_deleteUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteUser" />
+  </wsdl:message>
+  <wsdl:message name="IService1_deleteUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_deleteOrg_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteOrg" />
+  </wsdl:message>
+  <wsdl:message name="IService1_deleteOrg_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteOrgResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateProfile" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_verifyEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:verifyEmail" />
+  </wsdl:message>
+  <wsdl:message name="IService1_verifyEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:verifyEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addNewsFeed_InputMessage">
+    <wsdl:part name="parameters" element="tns:addNewsFeed" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addNewsFeed_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addNewsFeedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetFeeds_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFeeds" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetFeeds_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFeedsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getNPOWithManager_InputMessage">
+    <wsdl:part name="parameters" element="tns:getNPOWithManager" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getNPOWithManager_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getNPOWithManagerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:getEvent" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getEvents_InputMessage">
+    <wsdl:part name="parameters" element="tns:getEvents" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getEvents_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getEventsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getNEvents_InputMessage">
+    <wsdl:part name="parameters" element="tns:getNEvents" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getNEvents_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getNEventsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:addEvent" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addDonationRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:addDonationRequest" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addDonationRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addDonationRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getAllDonationRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAllDonationRequest" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getAllDonationRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAllDonationRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getAllNDonationRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAllNDonationRequest" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getAllNDonationRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAllNDonationRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_hasDonatatedReq_InputMessage">
+    <wsdl:part name="parameters" element="tns:hasDonatatedReq" />
+  </wsdl:message>
+  <wsdl:message name="IService1_hasDonatatedReq_OutputMessage">
+    <wsdl:part name="parameters" element="tns:hasDonatatedReqResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdatePassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePassword" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdatePassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getUserID_InputMessage">
+    <wsdl:part name="parameters" element="tns:getUserID" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getUserID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addDonation_InputMessage">
+    <wsdl:part name="parameters" element="tns:addDonation" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addDonation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addDonationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getDonation_InputMessage">
+    <wsdl:part name="parameters" element="tns:getDonation" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getDonation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getDonationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getDonationUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:getDonationUser" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getDonationUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getDonationUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getOrg_InputMessage">
+    <wsdl:part name="parameters" element="tns:getOrg" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getOrg_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getOrgResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getDonorEmails_InputMessage">
+    <wsdl:part name="parameters" element="tns:getDonorEmails" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getDonorEmails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getDonorEmailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_setRSVP_InputMessage">
+    <wsdl:part name="parameters" element="tns:setRSVP" />
+  </wsdl:message>
+  <wsdl:message name="IService1_setRSVP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:setRSVPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getEventUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:getEventUser" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getEventUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getEventUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getGetRSVPList_InputMessage">
+    <wsdl:part name="parameters" element="tns:getGetRSVPList" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getGetRSVPList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getGetRSVPListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_setVolunteer_InputMessage">
+    <wsdl:part name="parameters" element="tns:setVolunteer" />
+  </wsdl:message>
+  <wsdl:message name="IService1_setVolunteer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:setVolunteerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getVolunteerUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:getVolunteerUser" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getVolunteerUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getVolunteerUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getVolunteers_InputMessage">
+    <wsdl:part name="parameters" element="tns:getVolunteers" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getVolunteers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getVolunteersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CommentOnVolunteer_InputMessage">
+    <wsdl:part name="parameters" element="tns:CommentOnVolunteer" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CommentOnVolunteer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CommentOnVolunteerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddNewFundraisingCamp_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddNewFundraisingCamp" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddNewFundraisingCamp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddNewFundraisingCampResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getFundRaisingCampaign_InputMessage">
+    <wsdl:part name="parameters" element="tns:getFundRaisingCampaign" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getFundRaisingCampaign_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getFundRaisingCampaignResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DonateFC_InputMessage">
+    <wsdl:part name="parameters" element="tns:DonateFC" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DonateFC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DonateFCResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getAmountSystemGenerated_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAmountSystemGenerated" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getAmountSystemGenerated_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAmountSystemGeneratedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getVerificationStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:getVerificationStatus" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getVerificationStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getVerificationStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getPointsInd_InputMessage">
+    <wsdl:part name="parameters" element="tns:getPointsInd" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getPointsInd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getPointsIndResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getPointsOrg_InputMessage">
+    <wsdl:part name="parameters" element="tns:getPointsOrg" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getPointsOrg_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getPointsOrgResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getAllFundRaisingCampaign_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAllFundRaisingCampaign" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getAllFundRaisingCampaign_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAllFundRaisingCampaignResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getOwnFundraisingCampaigns_InputMessage">
+    <wsdl:part name="parameters" element="tns:getOwnFundraisingCampaigns" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getOwnFundraisingCampaigns_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getOwnFundraisingCampaignsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getNPOTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:getNPOTypes" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getNPOTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getNPOTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getNPOofType_InputMessage">
+    <wsdl:part name="parameters" element="tns:getNPOofType" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getNPOofType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getNPOofTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SetFeedback_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetFeedback" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SetFeedback_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetFeedbackResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getAverageRating_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAverageRating" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getAverageRating_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAverageRatingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_setFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:setFile" />
+  </wsdl:message>
+  <wsdl:message name="IService1_setFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:setFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addUserImage_InputMessage">
+    <wsdl:part name="parameters" element="tns:addUserImage" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addUserImage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addUserImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addOrgImage_InputMessage">
+    <wsdl:part name="parameters" element="tns:addOrgImage" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addOrgImage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addOrgImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addOrgFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:addOrgFile" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addOrgFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addOrgFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getUserImage_InputMessage">
+    <wsdl:part name="parameters" element="tns:getUserImage" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getUserImage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getUserImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:getFile" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_verifyOrg_InputMessage">
+    <wsdl:part name="parameters" element="tns:verifyOrg" />
+  </wsdl:message>
+  <wsdl:message name="IService1_verifyOrg_OutputMessage">
+    <wsdl:part name="parameters" element="tns:verifyOrgResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_TotalRecievedFromDonations_InputMessage">
+    <wsdl:part name="parameters" element="tns:TotalRecievedFromDonations" />
+  </wsdl:message>
+  <wsdl:message name="IService1_TotalRecievedFromDonations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TotalRecievedFromDonationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_TotalDonated_InputMessage">
+    <wsdl:part name="parameters" element="tns:TotalDonated" />
+  </wsdl:message>
+  <wsdl:message name="IService1_TotalDonated_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TotalDonatedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetNextEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNextEvent" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetNextEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNextEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetTotalFCProgress_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTotalFCProgress" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetTotalFCProgress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTotalFCProgressResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetMobileEvents_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMobileEvents" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetMobileEvents_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMobileEventsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getNextVolunteer_InputMessage">
+    <wsdl:part name="parameters" element="tns:getNextVolunteer" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getNextVolunteer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getNextVolunteerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getNextNPOEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:getNextNPOEvent" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getNextNPOEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getNextNPOEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetMobileEventsAtt_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMobileEventsAtt" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetMobileEventsAtt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMobileEventsAttResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="CaptureVolTimeMobile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/CaptureVolTimeMobile" message="tns:IService1_CaptureVolTimeMobile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/CaptureVolTimeMobileResponse" message="tns:IService1_CaptureVolTimeMobile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="checkBadge">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/checkBadge" message="tns:IService1_checkBadge_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/checkBadgeResponse" message="tns:IService1_checkBadge_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getNumOfBadgesEarned">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getNumOfBadgesEarned" message="tns:IService1_getNumOfBadgesEarned_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getNumOfBadgesEarnedResponse" message="tns:IService1_getNumOfBadgesEarned_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllDailyDonations">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getAllDailyDonations" message="tns:IService1_getAllDailyDonations_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getAllDailyDonationsResponse" message="tns:IService1_getAllDailyDonations_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllDailyDonationsUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getAllDailyDonationsUser" message="tns:IService1_getAllDailyDonationsUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getAllDailyDonationsUserResponse" message="tns:IService1_getAllDailyDonationsUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getVolunteersByProvince">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getVolunteersByProvince" message="tns:IService1_getVolunteersByProvince_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getVolunteersByProvinceResponse" message="tns:IService1_getVolunteersByProvince_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getSystemFund">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getSystemFund" message="tns:IService1_getSystemFund_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getSystemFundResponse" message="tns:IService1_getSystemFund_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getTopBusDon">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getTopBusDon" message="tns:IService1_getTopBusDon_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getTopBusDonResponse" message="tns:IService1_getTopBusDon_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getFCReports">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getFCReports" message="tns:IService1_getFCReports_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getFCReportsResponse" message="tns:IService1_getFCReports_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getVolsShowingUp">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getVolsShowingUp" message="tns:IService1_getVolsShowingUp_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getVolsShowingUpResponse" message="tns:IService1_getVolsShowingUp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getFCSuccessRate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getFCSuccessRate" message="tns:IService1_getFCSuccessRate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getFCSuccessRateResponse" message="tns:IService1_getFCSuccessRate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getNPOActivity">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getNPOActivity" message="tns:IService1_getNPOActivity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getNPOActivityResponse" message="tns:IService1_getNPOActivity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MostActiveUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/MostActiveUser" message="tns:IService1_MostActiveUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/MostActiveUserResponse" message="tns:IService1_MostActiveUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="targetedDonations">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/targetedDonations" message="tns:IService1_targetedDonations_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/targetedDonationsResponse" message="tns:IService1_targetedDonations_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TypeMostSupportInArea">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/TypeMostSupportInArea" message="tns:IService1_TypeMostSupportInArea_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/TypeMostSupportInAreaResponse" message="tns:IService1_TypeMostSupportInArea_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MostSupportByType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/MostSupportByType" message="tns:IService1_MostSupportByType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/MostSupportByTypeResponse" message="tns:IService1_MostSupportByType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MostSupportInType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/MostSupportInType" message="tns:IService1_MostSupportInType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/MostSupportInTypeResponse" message="tns:IService1_MostSupportInType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NumOfOrgByIndustry">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/NumOfOrgByIndustry" message="tns:IService1_NumOfOrgByIndustry_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/NumOfOrgByIndustryResponse" message="tns:IService1_NumOfOrgByIndustry_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getDailyUserRegistration">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getDailyUserRegistration" message="tns:IService1_getDailyUserRegistration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getDailyUserRegistrationResponse" message="tns:IService1_getDailyUserRegistration_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getDailyOrganisationRegistration">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getDailyOrganisationRegistration" message="tns:IService1_getDailyOrganisationRegistration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getDailyOrganisationRegistrationResponse" message="tns:IService1_getDailyOrganisationRegistration_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getUserBadgesCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getUserBadgesCount" message="tns:IService1_getUserBadgesCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getUserBadgesCountResponse" message="tns:IService1_getUserBadgesCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getNPORatingReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getNPORatingReport" message="tns:IService1_getNPORatingReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getNPORatingReportResponse" message="tns:IService1_getNPORatingReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getDonationsForComparison">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getDonationsForComparison" message="tns:IService1_getDonationsForComparison_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getDonationsForComparisonResponse" message="tns:IService1_getDonationsForComparison_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="chechForNewDonations">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/chechForNewDonations" message="tns:IService1_chechForNewDonations_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/chechForNewDonationsResponse" message="tns:IService1_chechForNewDonations_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="checkLiveNewDonations">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/checkLiveNewDonations" message="tns:IService1_checkLiveNewDonations_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/checkLiveNewDonationsResponse" message="tns:IService1_checkLiveNewDonations_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="registerIndividual">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/registerIndividual" message="tns:IService1_registerIndividual_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/registerIndividualResponse" message="tns:IService1_registerIndividual_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NumberOfTimes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/NumberOfTimes" message="tns:IService1_NumberOfTimes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/NumberOfTimesResponse" message="tns:IService1_NumberOfTimes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addOrganisation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/addOrganisation" message="tns:IService1_addOrganisation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/addOrganisationResponse" message="tns:IService1_addOrganisation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/CheckDetails" message="tns:IService1_CheckDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/CheckDetailsResponse" message="tns:IService1_CheckDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getUsers" message="tns:IService1_getUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getUsersResponse" message="tns:IService1_getUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getOrganisations">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getOrganisations" message="tns:IService1_getOrganisations_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getOrganisationsResponse" message="tns:IService1_getOrganisations_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getUser" message="tns:IService1_getUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getUserResponse" message="tns:IService1_getUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/deleteUser" message="tns:IService1_deleteUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/deleteUserResponse" message="tns:IService1_deleteUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteOrg">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/deleteOrg" message="tns:IService1_deleteOrg_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/deleteOrgResponse" message="tns:IService1_deleteOrg_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProfile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateProfile" message="tns:IService1_UpdateProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateProfileResponse" message="tns:IService1_UpdateProfile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="verifyEmail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/verifyEmail" message="tns:IService1_verifyEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/verifyEmailResponse" message="tns:IService1_verifyEmail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addNewsFeed">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/addNewsFeed" message="tns:IService1_addNewsFeed_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/addNewsFeedResponse" message="tns:IService1_addNewsFeed_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFeeds">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetFeeds" message="tns:IService1_GetFeeds_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetFeedsResponse" message="tns:IService1_GetFeeds_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getNPOWithManager">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getNPOWithManager" message="tns:IService1_getNPOWithManager_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getNPOWithManagerResponse" message="tns:IService1_getNPOWithManager_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getEvent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getEvent" message="tns:IService1_getEvent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getEventResponse" message="tns:IService1_getEvent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getEvents">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getEvents" message="tns:IService1_getEvents_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getEventsResponse" message="tns:IService1_getEvents_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getNEvents">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getNEvents" message="tns:IService1_getNEvents_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getNEventsResponse" message="tns:IService1_getNEvents_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addEvent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/addEvent" message="tns:IService1_addEvent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/addEventResponse" message="tns:IService1_addEvent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addDonationRequest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/addDonationRequest" message="tns:IService1_addDonationRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/addDonationRequestResponse" message="tns:IService1_addDonationRequest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllDonationRequest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getAllDonationRequest" message="tns:IService1_getAllDonationRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getAllDonationRequestResponse" message="tns:IService1_getAllDonationRequest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllNDonationRequest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getAllNDonationRequest" message="tns:IService1_getAllNDonationRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getAllNDonationRequestResponse" message="tns:IService1_getAllNDonationRequest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="hasDonatatedReq">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/hasDonatatedReq" message="tns:IService1_hasDonatatedReq_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/hasDonatatedReqResponse" message="tns:IService1_hasDonatatedReq_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdatePassword" message="tns:IService1_UpdatePassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdatePasswordResponse" message="tns:IService1_UpdatePassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getUserID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getUserID" message="tns:IService1_getUserID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getUserIDResponse" message="tns:IService1_getUserID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addDonation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/addDonation" message="tns:IService1_addDonation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/addDonationResponse" message="tns:IService1_addDonation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getDonation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getDonation" message="tns:IService1_getDonation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getDonationResponse" message="tns:IService1_getDonation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getDonationUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getDonationUser" message="tns:IService1_getDonationUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getDonationUserResponse" message="tns:IService1_getDonationUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getOrg">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getOrg" message="tns:IService1_getOrg_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getOrgResponse" message="tns:IService1_getOrg_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getDonorEmails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getDonorEmails" message="tns:IService1_getDonorEmails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getDonorEmailsResponse" message="tns:IService1_getDonorEmails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="setRSVP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/setRSVP" message="tns:IService1_setRSVP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/setRSVPResponse" message="tns:IService1_setRSVP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getEventUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getEventUser" message="tns:IService1_getEventUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getEventUserResponse" message="tns:IService1_getEventUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getGetRSVPList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getGetRSVPList" message="tns:IService1_getGetRSVPList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getGetRSVPListResponse" message="tns:IService1_getGetRSVPList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="setVolunteer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/setVolunteer" message="tns:IService1_setVolunteer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/setVolunteerResponse" message="tns:IService1_setVolunteer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getVolunteerUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getVolunteerUser" message="tns:IService1_getVolunteerUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getVolunteerUserResponse" message="tns:IService1_getVolunteerUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getVolunteers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getVolunteers" message="tns:IService1_getVolunteers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getVolunteersResponse" message="tns:IService1_getVolunteers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CommentOnVolunteer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/CommentOnVolunteer" message="tns:IService1_CommentOnVolunteer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/CommentOnVolunteerResponse" message="tns:IService1_CommentOnVolunteer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddNewFundraisingCamp">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddNewFundraisingCamp" message="tns:IService1_AddNewFundraisingCamp_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddNewFundraisingCampResponse" message="tns:IService1_AddNewFundraisingCamp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getFundRaisingCampaign">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getFundRaisingCampaign" message="tns:IService1_getFundRaisingCampaign_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getFundRaisingCampaignResponse" message="tns:IService1_getFundRaisingCampaign_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DonateFC">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DonateFC" message="tns:IService1_DonateFC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DonateFCResponse" message="tns:IService1_DonateFC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAmountSystemGenerated">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getAmountSystemGenerated" message="tns:IService1_getAmountSystemGenerated_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getAmountSystemGeneratedResponse" message="tns:IService1_getAmountSystemGenerated_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getVerificationStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getVerificationStatus" message="tns:IService1_getVerificationStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getVerificationStatusResponse" message="tns:IService1_getVerificationStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getPointsInd">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getPointsInd" message="tns:IService1_getPointsInd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getPointsIndResponse" message="tns:IService1_getPointsInd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getPointsOrg">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getPointsOrg" message="tns:IService1_getPointsOrg_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getPointsOrgResponse" message="tns:IService1_getPointsOrg_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllFundRaisingCampaign">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getAllFundRaisingCampaign" message="tns:IService1_getAllFundRaisingCampaign_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getAllFundRaisingCampaignResponse" message="tns:IService1_getAllFundRaisingCampaign_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getOwnFundraisingCampaigns">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getOwnFundraisingCampaigns" message="tns:IService1_getOwnFundraisingCampaigns_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getOwnFundraisingCampaignsResponse" message="tns:IService1_getOwnFundraisingCampaigns_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getNPOTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getNPOTypes" message="tns:IService1_getNPOTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getNPOTypesResponse" message="tns:IService1_getNPOTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getNPOofType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getNPOofType" message="tns:IService1_getNPOofType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getNPOofTypeResponse" message="tns:IService1_getNPOofType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetFeedback">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SetFeedback" message="tns:IService1_SetFeedback_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SetFeedbackResponse" message="tns:IService1_SetFeedback_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAverageRating">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getAverageRating" message="tns:IService1_getAverageRating_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getAverageRatingResponse" message="tns:IService1_getAverageRating_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="setFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/setFile" message="tns:IService1_setFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/setFileResponse" message="tns:IService1_setFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addUserImage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/addUserImage" message="tns:IService1_addUserImage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/addUserImageResponse" message="tns:IService1_addUserImage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addOrgImage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/addOrgImage" message="tns:IService1_addOrgImage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/addOrgImageResponse" message="tns:IService1_addOrgImage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addOrgFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/addOrgFile" message="tns:IService1_addOrgFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/addOrgFileResponse" message="tns:IService1_addOrgFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getUserImage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getUserImage" message="tns:IService1_getUserImage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getUserImageResponse" message="tns:IService1_getUserImage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getFile" message="tns:IService1_getFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getFileResponse" message="tns:IService1_getFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="verifyOrg">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/verifyOrg" message="tns:IService1_verifyOrg_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/verifyOrgResponse" message="tns:IService1_verifyOrg_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TotalRecievedFromDonations">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/TotalRecievedFromDonations" message="tns:IService1_TotalRecievedFromDonations_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/TotalRecievedFromDonationsResponse" message="tns:IService1_TotalRecievedFromDonations_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TotalDonated">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/TotalDonated" message="tns:IService1_TotalDonated_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/TotalDonatedResponse" message="tns:IService1_TotalDonated_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNextEvent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetNextEvent" message="tns:IService1_GetNextEvent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetNextEventResponse" message="tns:IService1_GetNextEvent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTotalFCProgress">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetTotalFCProgress" message="tns:IService1_GetTotalFCProgress_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetTotalFCProgressResponse" message="tns:IService1_GetTotalFCProgress_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMobileEvents">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetMobileEvents" message="tns:IService1_GetMobileEvents_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetMobileEventsResponse" message="tns:IService1_GetMobileEvents_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getNextVolunteer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getNextVolunteer" message="tns:IService1_getNextVolunteer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getNextVolunteerResponse" message="tns:IService1_getNextVolunteer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getNextNPOEvent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getNextNPOEvent" message="tns:IService1_getNextNPOEvent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getNextNPOEventResponse" message="tns:IService1_getNextNPOEvent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMobileEventsAtt">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetMobileEventsAtt" message="tns:IService1_GetMobileEventsAtt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetMobileEventsAttResponse" message="tns:IService1_GetMobileEventsAtt_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CaptureVolTimeMobile">
+      <soap:operation soapAction="http://tempuri.org/IService1/CaptureVolTimeMobile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkBadge">
+      <soap:operation soapAction="http://tempuri.org/IService1/checkBadge" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNumOfBadgesEarned">
+      <soap:operation soapAction="http://tempuri.org/IService1/getNumOfBadgesEarned" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllDailyDonations">
+      <soap:operation soapAction="http://tempuri.org/IService1/getAllDailyDonations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllDailyDonationsUser">
+      <soap:operation soapAction="http://tempuri.org/IService1/getAllDailyDonationsUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getVolunteersByProvince">
+      <soap:operation soapAction="http://tempuri.org/IService1/getVolunteersByProvince" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSystemFund">
+      <soap:operation soapAction="http://tempuri.org/IService1/getSystemFund" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTopBusDon">
+      <soap:operation soapAction="http://tempuri.org/IService1/getTopBusDon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFCReports">
+      <soap:operation soapAction="http://tempuri.org/IService1/getFCReports" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getVolsShowingUp">
+      <soap:operation soapAction="http://tempuri.org/IService1/getVolsShowingUp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFCSuccessRate">
+      <soap:operation soapAction="http://tempuri.org/IService1/getFCSuccessRate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNPOActivity">
+      <soap:operation soapAction="http://tempuri.org/IService1/getNPOActivity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostActiveUser">
+      <soap:operation soapAction="http://tempuri.org/IService1/MostActiveUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="targetedDonations">
+      <soap:operation soapAction="http://tempuri.org/IService1/targetedDonations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TypeMostSupportInArea">
+      <soap:operation soapAction="http://tempuri.org/IService1/TypeMostSupportInArea" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostSupportByType">
+      <soap:operation soapAction="http://tempuri.org/IService1/MostSupportByType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostSupportInType">
+      <soap:operation soapAction="http://tempuri.org/IService1/MostSupportInType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NumOfOrgByIndustry">
+      <soap:operation soapAction="http://tempuri.org/IService1/NumOfOrgByIndustry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDailyUserRegistration">
+      <soap:operation soapAction="http://tempuri.org/IService1/getDailyUserRegistration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDailyOrganisationRegistration">
+      <soap:operation soapAction="http://tempuri.org/IService1/getDailyOrganisationRegistration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUserBadgesCount">
+      <soap:operation soapAction="http://tempuri.org/IService1/getUserBadgesCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNPORatingReport">
+      <soap:operation soapAction="http://tempuri.org/IService1/getNPORatingReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDonationsForComparison">
+      <soap:operation soapAction="http://tempuri.org/IService1/getDonationsForComparison" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="chechForNewDonations">
+      <soap:operation soapAction="http://tempuri.org/IService1/chechForNewDonations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkLiveNewDonations">
+      <soap:operation soapAction="http://tempuri.org/IService1/checkLiveNewDonations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registerIndividual">
+      <soap:operation soapAction="http://tempuri.org/IService1/registerIndividual" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NumberOfTimes">
+      <soap:operation soapAction="http://tempuri.org/IService1/NumberOfTimes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addOrganisation">
+      <soap:operation soapAction="http://tempuri.org/IService1/addOrganisation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckDetails">
+      <soap:operation soapAction="http://tempuri.org/IService1/CheckDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUsers">
+      <soap:operation soapAction="http://tempuri.org/IService1/getUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOrganisations">
+      <soap:operation soapAction="http://tempuri.org/IService1/getOrganisations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUser">
+      <soap:operation soapAction="http://tempuri.org/IService1/getUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteUser">
+      <soap:operation soapAction="http://tempuri.org/IService1/deleteUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteOrg">
+      <soap:operation soapAction="http://tempuri.org/IService1/deleteOrg" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProfile">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="verifyEmail">
+      <soap:operation soapAction="http://tempuri.org/IService1/verifyEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addNewsFeed">
+      <soap:operation soapAction="http://tempuri.org/IService1/addNewsFeed" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFeeds">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetFeeds" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNPOWithManager">
+      <soap:operation soapAction="http://tempuri.org/IService1/getNPOWithManager" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEvent">
+      <soap:operation soapAction="http://tempuri.org/IService1/getEvent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEvents">
+      <soap:operation soapAction="http://tempuri.org/IService1/getEvents" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNEvents">
+      <soap:operation soapAction="http://tempuri.org/IService1/getNEvents" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addEvent">
+      <soap:operation soapAction="http://tempuri.org/IService1/addEvent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addDonationRequest">
+      <soap:operation soapAction="http://tempuri.org/IService1/addDonationRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllDonationRequest">
+      <soap:operation soapAction="http://tempuri.org/IService1/getAllDonationRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllNDonationRequest">
+      <soap:operation soapAction="http://tempuri.org/IService1/getAllNDonationRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="hasDonatatedReq">
+      <soap:operation soapAction="http://tempuri.org/IService1/hasDonatatedReq" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePassword">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdatePassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUserID">
+      <soap:operation soapAction="http://tempuri.org/IService1/getUserID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addDonation">
+      <soap:operation soapAction="http://tempuri.org/IService1/addDonation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDonation">
+      <soap:operation soapAction="http://tempuri.org/IService1/getDonation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDonationUser">
+      <soap:operation soapAction="http://tempuri.org/IService1/getDonationUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOrg">
+      <soap:operation soapAction="http://tempuri.org/IService1/getOrg" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDonorEmails">
+      <soap:operation soapAction="http://tempuri.org/IService1/getDonorEmails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setRSVP">
+      <soap:operation soapAction="http://tempuri.org/IService1/setRSVP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEventUser">
+      <soap:operation soapAction="http://tempuri.org/IService1/getEventUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getGetRSVPList">
+      <soap:operation soapAction="http://tempuri.org/IService1/getGetRSVPList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setVolunteer">
+      <soap:operation soapAction="http://tempuri.org/IService1/setVolunteer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getVolunteerUser">
+      <soap:operation soapAction="http://tempuri.org/IService1/getVolunteerUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getVolunteers">
+      <soap:operation soapAction="http://tempuri.org/IService1/getVolunteers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CommentOnVolunteer">
+      <soap:operation soapAction="http://tempuri.org/IService1/CommentOnVolunteer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewFundraisingCamp">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddNewFundraisingCamp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFundRaisingCampaign">
+      <soap:operation soapAction="http://tempuri.org/IService1/getFundRaisingCampaign" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DonateFC">
+      <soap:operation soapAction="http://tempuri.org/IService1/DonateFC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAmountSystemGenerated">
+      <soap:operation soapAction="http://tempuri.org/IService1/getAmountSystemGenerated" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getVerificationStatus">
+      <soap:operation soapAction="http://tempuri.org/IService1/getVerificationStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPointsInd">
+      <soap:operation soapAction="http://tempuri.org/IService1/getPointsInd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPointsOrg">
+      <soap:operation soapAction="http://tempuri.org/IService1/getPointsOrg" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllFundRaisingCampaign">
+      <soap:operation soapAction="http://tempuri.org/IService1/getAllFundRaisingCampaign" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOwnFundraisingCampaigns">
+      <soap:operation soapAction="http://tempuri.org/IService1/getOwnFundraisingCampaigns" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNPOTypes">
+      <soap:operation soapAction="http://tempuri.org/IService1/getNPOTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNPOofType">
+      <soap:operation soapAction="http://tempuri.org/IService1/getNPOofType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetFeedback">
+      <soap:operation soapAction="http://tempuri.org/IService1/SetFeedback" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAverageRating">
+      <soap:operation soapAction="http://tempuri.org/IService1/getAverageRating" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setFile">
+      <soap:operation soapAction="http://tempuri.org/IService1/setFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addUserImage">
+      <soap:operation soapAction="http://tempuri.org/IService1/addUserImage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addOrgImage">
+      <soap:operation soapAction="http://tempuri.org/IService1/addOrgImage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addOrgFile">
+      <soap:operation soapAction="http://tempuri.org/IService1/addOrgFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUserImage">
+      <soap:operation soapAction="http://tempuri.org/IService1/getUserImage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFile">
+      <soap:operation soapAction="http://tempuri.org/IService1/getFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="verifyOrg">
+      <soap:operation soapAction="http://tempuri.org/IService1/verifyOrg" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TotalRecievedFromDonations">
+      <soap:operation soapAction="http://tempuri.org/IService1/TotalRecievedFromDonations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TotalDonated">
+      <soap:operation soapAction="http://tempuri.org/IService1/TotalDonated" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNextEvent">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetNextEvent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTotalFCProgress">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetTotalFCProgress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMobileEvents">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetMobileEvents" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNextVolunteer">
+      <soap:operation soapAction="http://tempuri.org/IService1/getNextVolunteer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNextNPOEvent">
+      <soap:operation soapAction="http://tempuri.org/IService1/getNextNPOEvent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMobileEventsAtt">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetMobileEventsAtt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://localhost:53319/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

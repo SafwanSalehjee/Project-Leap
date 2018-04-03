@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">ProjectLeapAndroid</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_logout">Logout</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="btnLogin">Login</string>
+    <string name="ipAddress">IP Address</string>
+    <string name="PortNum">Port Number</string>
+    <string name="btnSave">Save</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+    <string name="title_activity_start">StartActivity</string>
+    <string name="title_activity_main_activity_npo"></string>
+    <string name="title_activity_main_activity_bus">MainActivityBus</string>
+    <string name="title_activity_main_activity_ind">MainActivityInd</string>
+
+    <string name="navigation_item_1_npo">Dashboard</string>
+    <string name="navigation_item_2_npo">Volunteers</string>
+    <string name="navigation_item_3_npo">Events</string>
+    <string name="navigation_item_1_ind">Dashboard</string>
+    <string name="navigation_item_2_ind">Volunteered at</string>
+    <string name="navigation_item_1_bus">Dashboard</string>
+    <string name="navigation_item_2_bus">Events at</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="error_detected">TAG NOT DETECTED. WHERE DO YOU WANT WRITE!?!?</string>
+    <string name="ok_writing">TAG DATA SAVED!!</string>
+    <string name="error_writing">ERROR DURING WRITING. ARE YOU SURE THAT YOUR TAG IS CLOSE TO YOUR MOBILE PHONE?</string>
+    <string name="ok_detection">TAG DETECTED: </string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

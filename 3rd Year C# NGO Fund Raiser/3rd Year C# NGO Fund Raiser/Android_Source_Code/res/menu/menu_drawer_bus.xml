@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_item_bus_1"
+        android:icon="@drawable/dashboard"
+        android:title="@string/navigation_item_1_bus" />
+    <item
+        android:id="@+id/navigation_item_bus_2"
+        android:icon="@drawable/event"
+        android:title="@string/navigation_item_2_bus" />
+</menu>

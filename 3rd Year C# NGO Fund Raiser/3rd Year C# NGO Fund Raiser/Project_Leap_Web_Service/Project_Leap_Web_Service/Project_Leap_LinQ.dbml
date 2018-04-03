@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Project_Leap_DB" Class="Project_Leap_LinQDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=(LocalDB)\V11.0;AttachDbFilename=|DataDirectory|\Project_Leap_DB.mdf;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="Project_Leap_DBConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Badge" Member="Badges">
+    <Type Name="Badge">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Condition" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Type" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Badge_UserBadge" Member="UserBadges" ThisKey="Id" OtherKey="BadgeID" Type="UserBadge" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BusinessPoint" Member="BusinessPoints">
+    <Type Name="BusinessPoint">
+      <Column Name="OrganisationID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Point" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Organisation_BusinessPoint" Member="Organisation" ThisKey="OrganisationID" OtherKey="OrganisationID" Type="Organisation" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Donation" Member="Donations">
+    <Type Name="Donation">
+      <Column Name="DonationID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OrganisationID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="DonationDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="RequestIDNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Donation_EquipmentDonation" Member="EquipmentDonation" ThisKey="DonationID" OtherKey="DonationID" Type="EquipmentDonation" Cardinality="One" />
+      <Association Name="Donation_MoneyDonation" Member="MoneyDonation" ThisKey="DonationID" OtherKey="DonationID" Type="MoneyDonation" Cardinality="One" />
+      <Association Name="DonationRequest_Donation" Member="DonationRequest" ThisKey="RequestIDNumber" OtherKey="RequestIDNumber" Type="DonationRequest" IsForeignKey="true" />
+      <Association Name="Organisation_Donation" Member="Organisation" ThisKey="OrganisationID" OtherKey="OrganisationID" Type="Organisation" IsForeignKey="true" />
+      <Association Name="SystemUser_Donation" Member="SystemUser" ThisKey="UserID" OtherKey="UserID" Type="SystemUser" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DonationRequest" Member="DonationRequests">
+    <Type Name="DonationRequest">
+      <Column Name="RequestIDNumber" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OrganisationID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="Type" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="DonationDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="DonationRequest_Donation" Member="Donations" ThisKey="RequestIDNumber" OtherKey="RequestIDNumber" Type="Donation" />
+      <Association Name="Organisation_DonationRequest" Member="Organisation" ThisKey="OrganisationID" OtherKey="OrganisationID" Type="Organisation" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EquipmentDonation" Member="EquipmentDonations">
+    <Type Name="EquipmentDonation">
+      <Column Name="DonationID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EquipmentName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Association Name="Donation_EquipmentDonation" Member="Donation" ThisKey="DonationID" OtherKey="DonationID" Type="Donation" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Event" Member="Events">
+    <Type Name="Event">
+      <Column Name="EventID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OrganisationID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Location" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="DateOfEvent" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Host" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="TimeOfEvent" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Event_EventRSVP" Member="EventRSVPs" ThisKey="EventID" OtherKey="EventID" Type="EventRSVP" />
+      <Association Name="Organisation_Event" Member="Organisation" ThisKey="OrganisationID" OtherKey="OrganisationID" Type="Organisation" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EventRSVP" Member="EventRSVPs">
+    <Type Name="EventRSVP">
+      <Column Name="RSVPID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EventID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Attendence" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Association Name="Event_EventRSVP" Member="Event" ThisKey="EventID" OtherKey="EventID" Type="Event" IsForeignKey="true" />
+      <Association Name="SystemUser_EventRSVP" Member="SystemUser" ThisKey="UserID" OtherKey="UserID" Type="SystemUser" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FundraisingCampaign" Member="FundraisingCampaigns">
+    <Type Name="FundraisingCampaign">
+      <Column Name="FundraisingCampaignID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OrganisationID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="CurrentAmount" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="TotalAmount" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Association Name="Organisation_FundraisingCampaign" Member="Organisation" ThisKey="OrganisationID" OtherKey="OrganisationID" Type="Organisation" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Individual" Member="Individuals">
+    <Type Name="Individual">
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Point" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Individual_VolunteerEvent" Member="VolunteerEvents" ThisKey="UserID" OtherKey="UserID" Type="VolunteerEvent" />
+      <Association Name="Individual_UserBadge" Member="UserBadges" ThisKey="UserID" OtherKey="UserID" Type="UserBadge" />
+      <Association Name="SystemUser_Individual" Member="SystemUser" ThisKey="UserID" OtherKey="UserID" Type="SystemUser" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Manager" Member="Managers">
+    <Type Name="Manager">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="OrganisationID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Organisation_Manager" Member="Organisation" ThisKey="OrganisationID" OtherKey="OrganisationID" Type="Organisation" IsForeignKey="true" />
+      <Association Name="SystemUser_Manager" Member="SystemUser" ThisKey="UserID" OtherKey="UserID" Type="SystemUser" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MoneyDonation" Member="MoneyDonations">
+    <Type Name="MoneyDonation">
+      <Column Name="DonationID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="TransactionPercentage" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="TransactionAmount" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Association Name="Donation_MoneyDonation" Member="Donation" ThisKey="DonationID" OtherKey="DonationID" Type="Donation" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NewsFeed" Member="NewsFeeds">
+    <Type Name="NewsFeed">
+      <Column Name="NewsFeedID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OrganisationID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Body" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Association Name="Organisation_NewsFeed" Member="Organisation" ThisKey="OrganisationID" OtherKey="OrganisationID" Type="Organisation" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NPORating" Member="NPORatings">
+    <Type Name="NPORating">
+      <Column Name="RatindID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="OrganisationID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Rating" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Organisation_NPORating" Member="Organisation" ThisKey="OrganisationID" OtherKey="OrganisationID" Type="Organisation" IsForeignKey="true" />
+      <Association Name="SystemUser_NPORating" Member="SystemUser" ThisKey="UserID" OtherKey="UserID" Type="SystemUser" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Organisation" Member="Organisations">
+    <Type Name="Organisation">
+      <Column Name="OrganisationID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OrganisationNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OrganisationName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="OrganisationType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Street" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Suburb" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Province" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Country" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Continent" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ContactNumber" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Industry" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="RegistrationDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Verified" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="FilePath" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="LogoURL" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="Banned" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="Organisation_BusinessPoint" Member="BusinessPoint" ThisKey="OrganisationID" OtherKey="OrganisationID" Type="BusinessPoint" Cardinality="One" />
+      <Association Name="Organisation_Donation" Member="Donations" ThisKey="OrganisationID" OtherKey="OrganisationID" Type="Donation" />
+      <Association Name="Organisation_DonationRequest" Member="DonationRequests" ThisKey="OrganisationID" OtherKey="OrganisationID" Type="DonationRequest" />
+      <Association Name="Organisation_Event" Member="Events" ThisKey="OrganisationID" OtherKey="OrganisationID" Type="Event" />
+      <Association Name="Organisation_FundraisingCampaign" Member="FundraisingCampaigns" ThisKey="OrganisationID" OtherKey="OrganisationID" Type="FundraisingCampaign" />
+      <Association Name="Organisation_Manager" Member="Managers" ThisKey="OrganisationID" OtherKey="OrganisationID" Type="Manager" />
+      <Association Name="Organisation_NewsFeed" Member="NewsFeeds" ThisKey="OrganisationID" OtherKey="OrganisationID" Type="NewsFeed" />
+      <Association Name="Organisation_NPORating" Member="NPORatings" ThisKey="OrganisationID" OtherKey="OrganisationID" Type="NPORating" />
+      <Association Name="Organisation_VolunteerEvent" Member="VolunteerEvents" ThisKey="OrganisationID" OtherKey="OrganisationID" Type="VolunteerEvent" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SystemUser" Member="SystemUsers">
+    <Type Name="SystemUser">
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="FirstName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Gender" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="DateOfBirth" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Province" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Country" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Continent" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="AccessLevel" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RegistrationDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ProfilePictureURL" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+      <Column Name="Banned" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="SystemUser_Donation" Member="Donations" ThisKey="UserID" OtherKey="UserID" Type="Donation" />
+      <Association Name="SystemUser_EventRSVP" Member="EventRSVPs" ThisKey="UserID" OtherKey="UserID" Type="EventRSVP" />
+      <Association Name="SystemUser_Individual" Member="Individual" ThisKey="UserID" OtherKey="UserID" Type="Individual" Cardinality="One" />
+      <Association Name="SystemUser_Manager" Member="Managers" ThisKey="UserID" OtherKey="UserID" Type="Manager" />
+      <Association Name="SystemUser_NPORating" Member="NPORatings" ThisKey="UserID" OtherKey="UserID" Type="NPORating" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TransactionPercentage" Member="TransactionPercentages">
+    <Type Name="TransactionPercentage">
+      <Column Name="TransactionID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Percentage" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AmountBracket" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VolunteerEvent" Member="VolunteerEvents">
+    <Type Name="VolunteerEvent">
+      <Column Name="VolunteerID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="OrganisationID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="VolunteerDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="HoursVolunteered" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Comment" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Association Name="Organisation_VolunteerEvent" Member="Organisation" ThisKey="OrganisationID" OtherKey="OrganisationID" Type="Organisation" IsForeignKey="true" />
+      <Association Name="Individual_VolunteerEvent" Member="Individual" ThisKey="UserID" OtherKey="UserID" Type="Individual" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserBadge" Member="UserBadges">
+    <Type Name="UserBadge">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BadgeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Badge_UserBadge" Member="Badge" ThisKey="BadgeID" OtherKey="Id" Type="Badge" IsForeignKey="true" />
+      <Association Name="Individual_UserBadge" Member="Individual" ThisKey="UserID" OtherKey="UserID" Type="Individual" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
